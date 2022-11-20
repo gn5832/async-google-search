@@ -103,16 +103,16 @@ class GoogleSearch:
 
 async def main():
     async for result in GoogleSearch(
-        query='giJHGFJHGFKLJJG77647dro', 
-        proxy_url='http://45.157.120.149:8000', 
-        proxy_auth=aiohttp.BasicAuth('WrHfNJ', 'yoCM0z'), 
+        query='russia', 
+        # proxy_url='http://111.111.111.111:8000', 
+        # proxy_auth=aiohttp.BasicAuth('111111', '111111'), 
         num_results_per_request=10, 
         num_requests=2
         ).search():
 
         print(result.url)
-        # print(result.base_url)
-        # print(result.clear_base_url)
+        print(result.base_url)
+        print(result.clear_base_url)
 
 
 if __name__ == '__main__':
