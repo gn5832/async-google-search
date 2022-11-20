@@ -7,7 +7,7 @@ To get results for a search term, simply use the search function in googlesearch
 ```python
 from asyncgooglesearch import GoogleSearch
 async def main():
-    async for result in GoogleSearch(query='test query').search():
+    async for result in GoogleSearch(query='Google').search():
         print(result.url)
 ```
 
@@ -15,13 +15,13 @@ async def main():
 googlesearch supports a few additional options. By default, googlesearch returns 10 results. This can be changed. To get a 100 results on Google for example, run the following program.
 ```python
 async def main():
-    async for result in GoogleSearch(query='test query', num_results_per_request=20, num_requests=5).search():
+    async for result in GoogleSearch(query='Google', num_results_per_request=20, num_requests=5).search():
         print(result.url)
 ```
 In addition, you can change the language google searches in. For example, to get results in French run the following program:
 ```python
 async def main():
-    async for result in GoogleSearch(query='test query', lang='ru').search():
+    async for result in GoogleSearch(query='Google', lang='ru').search():
         print(result.url)
 ```
 ## GoogleSearch
